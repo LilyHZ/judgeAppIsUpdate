@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		24A978AF1B579DA6003709F4 /* PingFenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24A978AE1B579DA6003709F4 /* PingFenViewController.swift */; };
+		24A978B11B579DC8003709F4 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A978B01B579DC8003709F4 /* StoreKit.framework */; };
 		24F43C1A1B0DB9C500437A1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F43C191B0DB9C500437A1B /* AppDelegate.swift */; };
 		24F43C1C1B0DB9C500437A1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F43C1B1B0DB9C500437A1B /* ViewController.swift */; };
 		24F43C1F1B0DB9C500437A1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24F43C1D1B0DB9C500437A1B /* Main.storyboard */; };
@@ -28,6 +30,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24A978AE1B579DA6003709F4 /* PingFenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PingFenViewController.swift; sourceTree = "<group>"; };
+		24A978B01B579DC8003709F4 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		24F43C141B0DB9C500437A1B /* judgeAppIsUpdate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = judgeAppIsUpdate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		24F43C181B0DB9C500437A1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24F43C191B0DB9C500437A1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24A978B11B579DC8003709F4 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +68,7 @@
 		24F43C0B1B0DB9C500437A1B = {
 			isa = PBXGroup;
 			children = (
+				24A978B01B579DC8003709F4 /* StoreKit.framework */,
 				24F43C161B0DB9C500437A1B /* judgeAppIsUpdate */,
 				24F43C2C1B0DB9C500437A1B /* judgeAppIsUpdateTests */,
 				24F43C151B0DB9C500437A1B /* Products */,
@@ -89,6 +95,7 @@
 				24F43C171B0DB9C500437A1B /* Supporting Files */,
 				24F43C961B0EFE7A00437A1B /* HttpRequest.swift */,
 				24F43C981B0EFEBB00437A1B /* Reachability.swift */,
+				24A978AE1B579DA6003709F4 /* PingFenViewController.swift */,
 			);
 			path = judgeAppIsUpdate;
 			sourceTree = "<group>";
@@ -221,6 +228,7 @@
 				24F43C1C1B0DB9C500437A1B /* ViewController.swift in Sources */,
 				24F43C1A1B0DB9C500437A1B /* AppDelegate.swift in Sources */,
 				24F43C991B0EFEBB00437A1B /* Reachability.swift in Sources */,
+				24A978AF1B579DA6003709F4 /* PingFenViewController.swift in Sources */,
 				24F43C971B0EFE7A00437A1B /* HttpRequest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
