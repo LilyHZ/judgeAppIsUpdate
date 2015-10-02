@@ -44,7 +44,7 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response:NSURLResponse!,data:NSData!,error:NSError!)->Void in
             
             //由于我们获取的数据数据是json格式。所以我们可以将其转化为字典。
-            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
             
             println("jsonResult:\(jsonResult)")
             
@@ -93,7 +93,7 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response:NSURLResponse!,data:NSData!,error:NSError!)->Void in
             
             //由于我们获取的数据数据是json格式。所以我们可以将其转化为字典。
-            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
             
             println("jsonResult:\(jsonResult)")
             
@@ -130,7 +130,7 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
         
         var postdata:NSData = post.dataUsingEncoding(NSASCIIStringEncoding)!
         
-        var postLenght:NSString = String(postdata.length)
+        var postLenght = String(postdata.length)
         
         var request:NSMutableURLRequest = NSMutableURLRequest(URL: nsURL)
         
@@ -144,7 +144,7 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue(), completionHandler: {(response:NSURLResponse!,data:NSData!,error:NSError!)->Void in
             
             //由于我们获取的数据数据是json格式。所以我们可以将其转化为字典。
-            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as NSDictionary
+            var jsonResult:NSDictionary = NSJSONSerialization.JSONObjectWithData(data, options: NSJSONReadingOptions.MutableContainers, error: nil) as! NSDictionary
             
             println("jsonResult:\(jsonResult)")
             
@@ -152,31 +152,6 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
             self.delegate?.didRecieveResults(jsonResult)
             
         })
-        
-        
-        //        var responseError: NSError?
-        //        var response: NSURLResponse?
-        //
-        //        var urlData:NSData? = NSURLConnection.sendSynchronousRequest(request, returningResponse: &response, error: &responseError)
-        //
-        //        if(urlData != nil){
-        //            let res = response as NSHTTPURLResponse!
-        //
-        //            NSLog("Response code: %ld", res.statusCode)
-        //
-        //            if(res.statusCode >= 200 && res.statusCode < 300){
-        //                var responseData:NSString = NSString(data:urlData!, encoding:NSUTF8StringEncoding)!
-        //
-        //                NSLog("Response ==> %@", responseData)
-        //
-        //                var error: NSError?
-        //
-        //                let data : NSDictionary = NSJSONSerialization.JSONObjectWithData(urlData!, options: NSJSONReadingOptions.MutableContainers, error: &error) as NSDictionary
-        //
-        //                self.delegate?.didRecieveResults(data)
-        //
-        //            }
-        //        }
         
     }
     
@@ -207,7 +182,7 @@ class HttpRequest: NSObject ,UIAlertViewDelegate{
     
     func reachabilityChanged(note: NSNotification) -> Bool{
         
-        let reachability = note.object as Reachability
+        let reachability = note.object as! Reachability
         
         if (!reachability.isReachable() && "No Connection" == reachability.currentReachabilityString){
             return true

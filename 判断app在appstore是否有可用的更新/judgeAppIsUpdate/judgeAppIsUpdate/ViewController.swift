@@ -31,15 +31,15 @@ class ViewController: UIViewController,HttpProtocol,UIAlertViewDelegate{
     func didRecieveResults(results:NSDictionary){
         
         if results["results"] != nil{
-            var infoArray = results["results"] as NSArray
+            var infoArray = results["results"] as! NSArray
             
-            var releaseInfo:NSDictionary = infoArray.objectAtIndex(0) as NSDictionary
+            var releaseInfo:NSDictionary = infoArray.objectAtIndex(0) as! NSDictionary
             
-            var appStoreVersion:NSString = releaseInfo.objectForKey("version") as NSString
+            var appStoreVersion:NSString = releaseInfo.objectForKey("version") as! NSString
             
             var infoDic:NSDictionary = NSBundle.mainBundle().infoDictionary! as NSDictionary
             
-            var currentVersion:NSString = infoDic.objectForKey("CFBundleShortVersionString") as NSString
+            var currentVersion:NSString = infoDic.objectForKey("CFBundleShortVersionString") as! NSString
             
             var curVerArr:NSArray = currentVersion.componentsSeparatedByString(".") as NSArray
             var appstoreVerArr:NSArray = appStoreVersion.componentsSeparatedByString(".") as NSArray
@@ -77,7 +77,7 @@ class ViewController: UIViewController,HttpProtocol,UIAlertViewDelegate{
             if needUpdate == true{
             
                 //trackViewURL临时变量存储app下载地址，可以让app跳转到appstore
-                trackViewUrl = releaseInfo.objectForKey("trackViewUrl") as String
+                trackViewUrl = releaseInfo.objectForKey("trackViewUrl") as! String
             
                 var alertView = UIAlertView(title: "版本升级", message: "发现有新版本，是否升级?", delegate: self, cancelButtonTitle: "暂不升级", otherButtonTitles: "马上升级")
                 alertView.show()
