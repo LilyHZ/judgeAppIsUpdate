@@ -13,9 +13,8 @@ class PingFenViewController: UIViewController,SKStoreProductViewControllerDelega
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        var trackViewUrl:String = "itms-apps://http://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=955723864"
-        var trackViewUrl:String = "itms-apps://http://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=547203890"
+        var trackViewUrl = "itms-apps://itunes.apple.com/app/id547203890"//ios7以上版本
+//        var trackViewUrl = "itms-apps://http://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=547203890"
         var application:UIApplication =  UIApplication.sharedApplication()
         application.openURL(NSURL(string: trackViewUrl)!)
         
